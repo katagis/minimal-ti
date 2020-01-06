@@ -68,7 +68,6 @@ struct TypeId {
 
 	constexpr std::size_t hash() const noexcept { return hash_; }
 	constexpr std::string_view name() const noexcept { return name_; }
-	std::string name_str() const noexcept { return std::string{ name_ }; }
 	friend constexpr bool operator==(const TypeId& lhs, const TypeId& rhs) noexcept { return lhs.hash_ == rhs.hash_; }
 	friend constexpr bool operator!=(const TypeId& lhs, const TypeId& rhs) noexcept { return !(lhs == rhs); }
 

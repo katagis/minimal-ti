@@ -19,5 +19,9 @@ int main() {
     using namespace tst;
     static_assert(mti::GetName<Enum>() == "tst::Enum");
     
+    constexpr mti::TypeId type = mti::GetTypeId<Test1>();
+    constexpr std::size_t hash = mti::GetHash<Test1>();
+    static_assert(type.hash() == hash);
+
     return 0;
 }
